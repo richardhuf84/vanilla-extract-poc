@@ -8,26 +8,43 @@ export const button = recipe({
     fontFamily: 'sans-serif',
     display: 'flex',
     marginBottom: 4,
+
+    ':focus-visible': {
+      outline: `2px solid ${vars.color.neutral.dark}`,
+      outlineOffset: '2px',
+    }
   },
 
   variants: {
     color: {
       accent: { 
-        backgroundColor: vars.color.accent,
-        color: vars.color.neutral.light
+        backgroundColor: vars.color.accent.default,
+        color: vars.color.neutral.light,
+
+        ':hover': {
+          background: vars.color.accent.default,
+          textDecoration: 'underline'
+        }
        },
       subdued: { 
-        backgroundColor:  vars.color.subdued,
+        backgroundColor:  vars.color.subdued.default,
         color: vars.color.neutral.light
       },
       muted: { 
-        backgroundColor: vars.color.muted,
+        backgroundColor: vars.color.muted.default,
         color: vars.color.neutral.dark
       }
     },
     variant: {
-      primary: {},
-      secondary: {}
+      primary: {
+      },
+      secondary: {
+        backgroundColor: 'transparent',
+        borderWidth: 2,
+        borderStyle: 'solid',
+        borderColor: vars.color.accent.default,
+        color: vars.color.accent.default,
+      }
     },
     size: {
       small: { padding: 12 },
@@ -46,8 +63,8 @@ export const button = recipe({
         backgroundColor: 'transparent',
         borderWidth: 2,
         borderStyle: 'solid',
-        borderColor: vars.color.accent,
-        color: vars.color.accent,
+        borderColor: vars.color.accent.default,
+        color: vars.color.accent.default,
       }
     },
     {
@@ -59,8 +76,8 @@ export const button = recipe({
         backgroundColor: 'transparent',
         borderWidth: 2,
         borderStyle: 'solid',
-        borderColor: vars.color.subdued,
-        color: vars.color.subdued,
+        borderColor: vars.color.subdued.default,
+        color: vars.color.subdued.default,
       }
     },
     {
@@ -72,7 +89,7 @@ export const button = recipe({
         backgroundColor: 'transparent',
         borderWidth: 2,
         borderStyle: 'solid',
-        borderColor: vars.color.muted,
+        borderColor: vars.color.muted.default,
         color: vars.color.neutral.dark,
       }
     }
