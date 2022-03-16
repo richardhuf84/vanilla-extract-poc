@@ -1,6 +1,15 @@
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 import { vars } from '@/theme/theme.css';
 
+const getVariantStyle = (color: string, background: string) => ({ 
+  backgroundColor: vars.color[background]['default'],
+  color: vars.color[color]['light'],
+
+  ':hover': {
+    background: vars.color.accent.hover,
+  }
+});
+
 export const button = recipe({
   base: {
     all: 'unset',
@@ -8,10 +17,15 @@ export const button = recipe({
     fontFamily: 'sans-serif',
     display: 'flex',
     marginBottom: 4,
+    transition: 'all 200ms ease',
 
     ':focus-visible': {
       outline: `2px solid ${vars.color.neutral.dark}`,
       outlineOffset: '2px',
+    },
+
+    ':hover': {
+      textDecoration: 'underline'
     }
   },
 
@@ -22,17 +36,24 @@ export const button = recipe({
         color: vars.color.neutral.light,
 
         ':hover': {
-          background: vars.color.accent.default,
-          textDecoration: 'underline'
+          background: vars.color.accent.hover,
         }
        },
       subdued: { 
         backgroundColor:  vars.color.subdued.default,
-        color: vars.color.neutral.light
+        color: vars.color.neutral.light,
+
+        ':hover': {
+          background: vars.color.subdued.hover,
+        }
       },
       muted: { 
         backgroundColor: vars.color.muted.default,
-        color: vars.color.neutral.dark
+        color: vars.color.neutral.dark,
+
+        ':hover': {
+          background: vars.color.muted.hover,
+        }
       }
     },
     variant: {
@@ -44,6 +65,12 @@ export const button = recipe({
         borderStyle: 'solid',
         borderColor: vars.color.accent.default,
         color: vars.color.accent.default,
+
+        ':hover': {
+          backgroundColor: 'transparent',
+          borderColor: vars.color.accent.hover,
+          color: vars.color.accent.hover,
+        }
       }
     },
     size: {
@@ -65,6 +92,10 @@ export const button = recipe({
         borderStyle: 'solid',
         borderColor: vars.color.accent.default,
         color: vars.color.accent.default,
+
+        ':hover': {
+          borderColor: vars.color.accent.hover
+        }
       }
     },
     {
@@ -78,7 +109,11 @@ export const button = recipe({
         borderStyle: 'solid',
         borderColor: vars.color.subdued.default,
         color: vars.color.subdued.default,
-      }
+        
+        ':hover': {
+          borderColor: vars.color.subdued.hover
+        }
+      },
     },
     {
       variants: {
@@ -91,6 +126,10 @@ export const button = recipe({
         borderStyle: 'solid',
         borderColor: vars.color.muted.default,
         color: vars.color.neutral.dark,
+
+        ':hover': {
+          borderColor: vars.color.muted.hover
+        }
       }
     }
   ],

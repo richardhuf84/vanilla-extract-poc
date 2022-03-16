@@ -9,15 +9,15 @@ export const [themeClass, vars] = createTheme({
   color: {
     accent: {
       default: 'hsla(270, 50%, 40%, 1)',
-      hover: 'hsla(270, 50%, 60%, 1)'
+      hover: 'hsla(270, 50%, 30%, 1)'
     },    
     subdued: {
       default: 'hsla(212, 28%, 25%, 1)',
-      hover: 'hsla(212, 28%, 45%, 1)',
+      hover: 'hsla(212, 28%, 15%, 1)',
     },
     muted: {
-      default: 'hsla(0, 0%, 91%, 1)',
-      hover: 'hsla(0, 0%, 71%, 1)',
+      default: 'hsla(0, 0%, 93%, 1)',
+      hover: 'hsla(0, 0%, 83%, 1)',
     },
     neutral: {
       light: 'hsla(0, 0%, 100%, 1)',
