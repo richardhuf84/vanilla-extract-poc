@@ -2,4 +2,4 @@
 
 Use the recipe API to create buttons with compound variants.
 
-[https://vanilla-extract.richardhuf.com.au/](View demo)
+[View demo](https://vanilla-extract.richardhuf.com.au/)
