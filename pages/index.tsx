@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { themeClass } from '../theme/theme.css';
-import Button from '../components/button/button'; 
+import Button from '../components/Button/Button'; 
+import Code from '../components/Code/Code'; 
+import Stack from '../components/Stack/Stack'; 
 
 const Home: NextPage = () => {
   return (
@@ -13,87 +15,153 @@ const Home: NextPage = () => {
       </Head>
 
       <section className={themeClass}>
-        <Button 
-          variant="primary" 
-        >
-          primary
-        </Button>
+
+        <Stack direction='inline'>
+          <Button 
+            variant="primary" 
+            >
+            Button
+          </Button>
+
+          <Code>variant="primary"</Code>
+        </Stack>
 
         <hr/>
 
-        <Button 
-          color="accent" 
-        >
-          accent
-        </Button>
+        <Stack direction='inline'>
+          <Button 
+            color="accent" 
+            >
+            Button
+          </Button>
+          
+          <Code>color="accent"</Code>
+        </Stack>
+
+        <Stack direction='inline'>
+
+          <Button 
+            color="subdued" 
+            >
+            Button
+          </Button>
+
+          <Code>color="subdued"</Code>
+        </Stack>
+
+        <Stack direction='inline'>
+          <Button 
+            color="muted" 
+            >
+            muted
+          </Button>
+
+          <Code>color="muted"</Code>
+        </Stack>
+
+        <hr/>
+
+        <Stack direction='inline'>
+
+          <Button 
+            color="accent" 
+            variant="primary"
+            >
+            Button
+          </Button>
+
+          <Stack>
+            <Code>color="accent"</Code>
+            <Code>variant="primary"</Code>
+          </Stack>
+        </Stack>
         
-        <Button 
-          color="subdued" 
-        >
-          subdued
-        </Button>
 
-        <Button 
-          color="muted" 
-        >
-          muted
-        </Button>
+        <Stack direction='inline'>
+          <Button 
+            color="subdued" 
+            variant="primary"
+            >
+            Button
+          </Button>
 
-        <hr/>
+          <Stack>
+            <Code>color="subdued"</Code>
+            <Code>variant="primary"</Code>
+          </Stack>
+        </Stack>
 
-        <Button 
-          color="accent" 
-          variant="primary"
-        >
-          primary | accent
-        </Button>
-        
-        <Button 
-          color="subdued" 
-          variant="primary"
-        >
-          primary | subdued
-        </Button>
+        <Stack direction='inline'>
 
-        <Button 
-          color="muted" 
-          variant="primary"
-        >
-          primary | muted
-        </Button>
+          <Button 
+            color="muted" 
+            variant="primary"
+            >
+            Button
+          </Button>
+    
+          <Stack>
+            <Code>color="muted"</Code>
+            <Code>variant="primary"</Code>
+          </Stack>
+        </Stack>
 
         <hr/>
 
-        <Button 
-          variant="secondary"
-        >
-          secondary
-        </Button>
+        <Stack direction='inline'>
 
+          <Button 
+            variant="secondary"
+            >
+            Button
+          </Button>
+
+          <Code>variant="secondary"</Code>
+        </Stack>
+    
         <hr/>
 
-        <Button 
-          color="accent" 
-          variant="secondary"
-        >
-          secondary | accent
-        </Button>
+        <Stack direction='inline'>
 
-        <Button 
-          color="subdued" 
-          variant="secondary"
-        >
-          secondary | subdued
-        </Button>
+          <Button 
+            color="accent" 
+            variant="secondary"
+            >
+            Button
+          </Button>
 
-        <Button 
-          color="muted" 
-          variant="secondary"
-        >
-          secondary | muted
-        </Button>
+          <Stack>
+            <Code>color="accent"</Code>
+            <Code>variant="secondary"</Code>
+          </Stack>
+        </Stack>
 
-        <hr/>
+        <Stack direction='inline'>
+          <Button 
+            color="subdued" 
+            variant="secondary"
+            >
+            Button
+          </Button>
+
+          <Stack>
+            <Code>color="subdued"</Code>
+            <Code>variant="secondary"</Code>
+          </Stack>
+        </Stack>
+
+
+        <Stack direction='inline'>
+          <Button 
+            color="muted" 
+            variant="secondary"
+            >
+            Button
+          </Button>
+
+          <Code>color="muted"</Code>
+          <Code>variant="secondary"</Code>
+        </Stack>
 
       </section>
     </>
