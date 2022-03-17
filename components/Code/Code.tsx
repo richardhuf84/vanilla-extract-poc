@@ -1,5 +1,5 @@
 import React from 'react';
-import { code } from './Code.css';
+import { code } from './code.css';
 
 interface CodeProps { 
   children: React.ReactNode;

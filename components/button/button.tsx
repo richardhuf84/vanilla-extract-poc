@@ -1,6 +1,6 @@
 import React from 'react';
-import { button } from './Button.css';
-import type { ButtonVariants } from './Button.css';
+import { button } from './button.css';
+import type { ButtonVariants } from './button.css';
 
 type buttonProps = ButtonVariants & { children: React.ReactNode }
 
