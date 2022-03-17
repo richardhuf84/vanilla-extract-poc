@@ -23,7 +23,7 @@ const Home: NextPage = () => {
             Button
           </Button>
 
-          <Code>variant="primary"</Code>
+          <Code>variant=primary</Code>
         </Stack>
 
         <hr/>
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             Button
           </Button>
           
-          <Code>color="accent"</Code>
+          <Code>color=accent</Code>
         </Stack>
 
         <Stack direction='inline'>
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
             Button
           </Button>
 
-          <Code>color="subdued"</Code>
+          <Code>color=subdued</Code>
         </Stack>
 
         <Stack direction='inline'>
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
             muted
           </Button>
 
-          <Code>color="muted"</Code>
+          <Code>color=muted</Code>
         </Stack>
 
         <hr/>
@@ -71,8 +71,8 @@ const Home: NextPage = () => {
           </Button>
 
           <Stack>
-            <Code>color="accent"</Code>
-            <Code>variant="primary"</Code>
+            <Code>color=accent</Code>
+            <Code>variant=primary</Code>
           </Stack>
         </Stack>
         
@@ -86,8 +86,8 @@ const Home: NextPage = () => {
           </Button>
 
           <Stack>
-            <Code>color="subdued"</Code>
-            <Code>variant="primary"</Code>
+            <Code>color=subdued</Code>
+            <Code>variant=primary</Code>
           </Stack>
         </Stack>
 
@@ -101,8 +101,8 @@ const Home: NextPage = () => {
           </Button>
     
           <Stack>
-            <Code>color="muted"</Code>
-            <Code>variant="primary"</Code>
+            <Code>color=muted</Code>
+            <Code>variant=primary</Code>
           </Stack>
         </Stack>
 
@@ -116,7 +116,7 @@ const Home: NextPage = () => {
             Button
           </Button>
 
-          <Code>variant="secondary"</Code>
+          <Code>variant=secondary</Code>
         </Stack>
     
         <hr/>
@@ -131,8 +131,8 @@ const Home: NextPage = () => {
           </Button>
 
           <Stack>
-            <Code>color="accent"</Code>
-            <Code>variant="secondary"</Code>
+            <Code>color=accent</Code>
+            <Code>variant=secondary</Code>
           </Stack>
         </Stack>
 
@@ -145,8 +145,8 @@ const Home: NextPage = () => {
           </Button>
 
           <Stack>
-            <Code>color="subdued"</Code>
-            <Code>variant="secondary"</Code>
+            <Code>color=subdued</Code>
+            <Code>variant=secondary</Code>
           </Stack>
         </Stack>
 
@@ -159,8 +159,8 @@ const Home: NextPage = () => {
             Button
           </Button>
 
-          <Code>color="muted"</Code>
-          <Code>variant="secondary"</Code>
+          <Code>color=muted</Code>
+          <Code>variant=secondary</Code>
         </Stack>
 
       </section>
