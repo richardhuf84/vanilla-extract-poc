@@ -4,9 +4,10 @@ import { vars } from '@/theme/theme.css';
 
 const base = style({
   padding: vars.space.small
-})
+});
 
 const spacing = {
+  none: 0,
   small: vars.space.small,
   medium: vars.space.medium,
   large: vars.space.large,
