@@ -15,6 +15,7 @@ export const button = recipe({
   base: {
     all: 'unset',
     borderRadius: 6,
+    cursor: 'pointer',
     fontFamily: 'sans-serif',
     display: 'flex',
     marginBottom: 4,
