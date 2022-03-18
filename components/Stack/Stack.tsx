@@ -1,6 +1,7 @@
 import React from 'react';
 import { stack } from './Stack.css';
 
+
 interface StackProps { 
   children: React.ReactNode;
   direction?: 'inline' | 'stack'
