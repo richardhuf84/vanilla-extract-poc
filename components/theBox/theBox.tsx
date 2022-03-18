@@ -14,14 +14,15 @@ export const Box = <C extends React.ElementType = 'div'>({
   as, 
   children, 
   padding = 'none',
-  ...props
+  className: classes,
+  ...props,
 }:BoxProps<C>) => {
   const Component = as || 'div';
 
   return (
   <Component 
     className={
-      [paddingVariant[padding], BoxStyles].join(' ')
+      [paddingVariant[padding], BoxStyles, classes].join(' ')
     }
     {...props}
     >

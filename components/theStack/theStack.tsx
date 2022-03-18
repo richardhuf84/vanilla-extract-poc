@@ -5,13 +5,19 @@ import { Box } from '@/components/theBox/theBox';
 interface StackProps { 
   children: React.ReactNode;
   direction?: 'inline' | 'stack';
+  padding?: 'small' | 'medium' | 'large' | 'none';
 }
 
-const Stack = ({children, direction = 'stack', ...props}: StackProps) => {
+const Stack = ({
+  children, 
+  direction = 'stack', 
+  padding = 'none',
+  ...props
+}: StackProps) => {
   
   return (
     <Box 
-      padding='large'
+      padding='small'
       className={stack[direction]}
       {...props}>
       {children}
