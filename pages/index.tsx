@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { themeClass } from '../theme/theme.css';
-import Button from '../components/Button/Button'; 
-import Code from '../components/Code/Code'; 
-import Stack from '../components/Stack/Stack'; 
+import Button from '../components/theButton/theButton'; 
+import Code from '../components/theCode/theCode'; 
+import Stack from '../components/theStack/theStack'; 
 
 const Home: NextPage = () => {
   return (
