@@ -17,6 +17,14 @@ const Home: NextPage = () => {
       <section className={themeClass}>
 
         <Stack direction='inline'>
+          <Code background='transparent' padding='small'>Component</Code>
+
+          <Code background='transparent'>Props</Code>
+        </Stack>
+      
+        <hr/>
+
+        <Stack direction='inline'>
           <Button 
             variant="primary" 
             >
@@ -150,7 +158,6 @@ const Home: NextPage = () => {
           </Stack>
         </Stack>
 
-
         <Stack direction='inline'>
           <Button 
             color="muted" 
@@ -159,8 +166,10 @@ const Home: NextPage = () => {
             Button
           </Button>
 
-          <Code>color=muted</Code>
-          <Code>variant=secondary</Code>
+          <Stack>
+            <Code>color=muted</Code>
+            <Code>variant=secondary</Code>
+          </Stack>
         </Stack>
 
       </section>

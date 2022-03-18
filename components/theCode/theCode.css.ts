@@ -1,9 +1,12 @@
-import { style } from '@vanilla-extract/css';
+import { style, styleVariants } from '@vanilla-extract/css';
 import { vars } from '@/theme/theme.css';
 
-export const code = style({
+const base = style({
   display: 'block',
   borderRadius: vars.borderRadii.small,
-  backgroundColor: '#EEE',
-  padding: '4px 6px'
 });
+
+export const codeVariants = styleVariants({
+  default: [base, { backgroundColor: vars.color.muted.default }],
+  transparent: [base, { backgroundColor: 'transparent' }]
+})

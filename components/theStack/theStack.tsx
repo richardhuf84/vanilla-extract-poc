@@ -4,7 +4,7 @@ import { stack } from './theStack.css';
 
 interface StackProps { 
   children: React.ReactNode;
-  direction?: 'inline' | 'stack'
+  direction?: 'inline' | 'stack';
 }
 
 const Stack = ({children, direction = 'stack', ...props}: StackProps) => {
