@@ -1,7 +1,7 @@
 import React from 'react';
+import classnames from 'classnames';
 import paddingVariant from '@/components/styles';
 import { BoxStyles } from './theBox.css';
-
 interface Props<C extends React.ElementType> {
   as?: C;
   children?: React.ReactNode;
@@ -18,12 +18,11 @@ export const Box = <C extends React.ElementType = 'div'>({
   ...props,
 }:BoxProps<C>) => {
   const Component = as || 'div';
-
+  const classNames = classnames(paddingVariant[padding], BoxStyles, classes);
+  console.log('classNames', classNames);
   return (
   <Component 
-    className={
-      [paddingVariant[padding], BoxStyles, classes].join(' ')
-    }
+    className={classNames}
     {...props}
     >
     {children}

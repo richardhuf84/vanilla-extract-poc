@@ -15,7 +15,7 @@ const Code = ({
   padding = 'small'
 }: CodeProps) => {  
   return (
-    <Box as='code' className={`${codeVariants[background]} ${paddingVariant[padding]}`}>
+    <Box as='code' className={codeVariants[background]}>
       {children}
     </Box>
   )
