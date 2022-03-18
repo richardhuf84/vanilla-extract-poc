@@ -17,7 +17,6 @@ const Stack = ({
   
   return (
     <Box 
-      padding='small'
       className={stack[direction]}
       {...props}>
       {children}
