@@ -12,10 +12,10 @@ interface CodeProps {
 const Code = ({
   children, 
   background = 'default', 
-  padding = 'small'
+  padding = 'medium'
 }: CodeProps) => {  
   return (
-    <Box as='code' className={codeVariants[background]}>
+    <Box as='code' padding={padding} className={codeVariants[background]}>
       {children}
     </Box>
   )
