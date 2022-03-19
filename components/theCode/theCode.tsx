@@ -1,6 +1,6 @@
 import React from 'react';
 import { codeVariants } from './theCode.css';
-import paddingVariant from '@/components/styles';
+import { paddingVariant } from '@/components/styles';
 import { Box } from '@/components/theBox/theBox';
 
 interface CodeProps { 

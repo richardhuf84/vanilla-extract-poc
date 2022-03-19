@@ -2,12 +2,12 @@ import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 import { vars } from '@/theme/theme.css';
 
 const baseVariant = {
-  backgroundColor: 'transparent',
+  backgroundColor: vars.color.neutral[300],
   borderWidth: 2,
   borderStyle: 'solid',
 
   ':hover': {
-    backgroundColor: 'transparent',
+    backgroundColor: vars.color.neutral[300],
   }
 };
 
@@ -22,7 +22,7 @@ export const button = recipe({
     transition: 'all 200ms ease',
 
     ':focus-visible': {
-      outline: `2px solid ${vars.color.neutral.dark}`,
+      outline: `2px solid ${vars.color.neutral[900]}`,
       outlineOffset: '2px',
     },
 
@@ -35,7 +35,7 @@ export const button = recipe({
     color: {
       accent: { 
         backgroundColor: vars.color.accent.default,
-        color: vars.color.neutral.light,
+        color: vars.color.neutral[300],
 
         ':hover': {
           background: vars.color.accent.hover,
@@ -43,7 +43,7 @@ export const button = recipe({
        },
       subdued: { 
         backgroundColor:  vars.color.subdued.default,
-        color: vars.color.neutral.light,
+        color: vars.color.neutral[300],
 
         ':hover': {
           background: vars.color.subdued.hover,
@@ -51,7 +51,7 @@ export const button = recipe({
       },
       muted: { 
         backgroundColor: vars.color.muted.default,
-        color: vars.color.neutral.dark,
+        color: vars.color.neutral[900],
 
         ':hover': {
           background: vars.color.muted.hover,
@@ -121,7 +121,7 @@ export const button = recipe({
       style: {
         ...baseVariant,
         borderColor: vars.color.muted.default,
-        color: vars.color.neutral.dark,
+        color: vars.color.neutral[900],
 
         ':hover': {
           ...baseVariant[':hover'],

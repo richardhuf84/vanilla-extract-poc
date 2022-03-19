@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import paddingVariant from '@/components/styles';
+import { paddingVariant } from '@/components/styles';
 import { BoxStyles } from './theBox.css';
 interface Props<C extends React.ElementType> {
   as?: C;

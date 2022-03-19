@@ -4,8 +4,96 @@ import { themeClass } from '../theme/theme.css';
 import Button from '../components/theButton/theButton'; 
 import Code from '../components/theCode/theCode'; 
 import Stack from '../components/theStack/theStack'; 
+import { zebraStripes } from '@/components/styles';
 
 const Home: NextPage = () => {
+  const data = [
+    {
+      id: 1,
+      props: [{
+        variant: 'primary'
+      }]
+    },
+    {
+      id: 2,
+      props: [{
+        color: 'accent',
+      }]
+    },
+    {
+      id: 3,
+      props: [{
+        color: 'subdued',
+      }]
+    },
+    {
+      id: 4,
+      props: [{
+        color: 'muted',
+      }]
+    },
+    {
+      id: 5,
+      props: [{
+        color: 'accent'
+      },
+      {
+        variant: 'primary'
+      }]
+    },
+    {
+      id: 6,
+      props: [{
+        color: 'subdued',
+      },
+      {
+        variant: 'primary'
+      }]
+    },
+    {
+      id: 7,
+      props: [{
+        color: 'muted',
+      },
+      {
+        variant: 'primary'
+      }]
+    },
+    {
+      id: 8,
+      props: [{
+        variant: 'secondary'
+      }]
+    },
+    {
+      id: 10,
+      props: [{
+        color: 'accent',
+      },
+      {
+        variant: 'secondary'
+      }]
+    },
+    {
+      id: 11,
+      props: [{
+        color: 'subdued',
+      },
+      {
+        variant: 'secondary'
+      }]
+    },
+    {
+      id: 12,
+      props: [{
+        color: 'muted',
+      },
+      {
+        variant: 'secondary'
+      }]
+    },
+  ];
+  
   return (
     <>
       <Head>
@@ -16,161 +104,34 @@ const Home: NextPage = () => {
 
       <section className={themeClass}>
 
-        <Stack direction='inline'>
-          <Code background='transparent' padding='small'>Component</Code>
-
+        <Stack direction="inline">
+          <Code background='transparent'>Component</Code>
           <Code background='transparent'>Props</Code>
         </Stack>
-      
-        <hr/>
 
-        <Stack direction='inline'>
-          <Button 
-            variant="primary" 
-            >
-            Button
-          </Button>
-
-          <Code>variant=primary</Code>
-        </Stack>
-
-        <hr/>
-
-        <Stack direction='inline'>
-          <Button 
-            color="accent" 
-            >
-            Button
-          </Button>
+        {data.map((item, index) => {
           
-          <Code>color=accent</Code>
-        </Stack>
+          const { props } = item;
+          const variant = props.find(prop => prop.variant);
+          const color = props.find(prop => prop.color);
 
-        <Stack direction='inline'>
-
-          <Button 
-            color="subdued" 
-            >
-            Button
-          </Button>
-
-          <Code>color=subdued</Code>
-        </Stack>
-
-        <Stack direction='inline'>
-          <Button 
-            color="muted" 
-            >
-            muted
-          </Button>
-
-          <Code>color=muted</Code>
-        </Stack>
-
-        <hr/>
-
-        <Stack direction='inline'>
-
-          <Button 
-            color="accent" 
-            variant="primary"
-            >
-            Button
-          </Button>
-
-          <Stack>
-            <Code>color=accent</Code>
-            <Code>variant=primary</Code>
-          </Stack>
-        </Stack>
+          return (
+            <Stack key={index} className={zebraStripes} padding="medium">
+              <Stack direction="inline" style={{ alignItems: 'center' }}>
+                <Button
+                  variant={variant ? variant['variant'] : undefined}
+                  color={color ? color['color'] : undefined}
+                >
+                  Button
+                </Button>
         
-
-        <Stack direction='inline'>
-          <Button 
-            color="subdued" 
-            variant="primary"
-            >
-            Button
-          </Button>
-
-          <Stack>
-            <Code>color=subdued</Code>
-            <Code>variant=primary</Code>
-          </Stack>
-        </Stack>
-
-        <Stack direction='inline'>
-
-          <Button 
-            color="muted" 
-            variant="primary"
-            >
-            Button
-          </Button>
-    
-          <Stack>
-            <Code>color=muted</Code>
-            <Code>variant=primary</Code>
-          </Stack>
-        </Stack>
-
-        <hr/>
-
-        <Stack direction='inline'>
-
-          <Button 
-            variant="secondary"
-            >
-            Button
-          </Button>
-
-          <Code>variant=secondary</Code>
-        </Stack>
-    
-        <hr/>
-
-        <Stack direction='inline'>
-
-          <Button 
-            color="accent" 
-            variant="secondary"
-            >
-            Button
-          </Button>
-
-          <Stack>
-            <Code>color=accent</Code>
-            <Code>variant=secondary</Code>
-          </Stack>
-        </Stack>
-
-        <Stack direction='inline'>
-          <Button 
-            color="subdued" 
-            variant="secondary"
-            >
-            Button
-          </Button>
-
-          <Stack>
-            <Code>color=subdued</Code>
-            <Code>variant=secondary</Code>
-          </Stack>
-        </Stack>
-
-        <Stack direction='inline'>
-          <Button 
-            color="muted" 
-            variant="secondary"
-            >
-            Button
-          </Button>
-
-          <Stack>
-            <Code>color=muted</Code>
-            <Code>variant=secondary</Code>
-          </Stack>
-        </Stack>
+                {props.map((prop, propKey) => <Code key={`prop-${propKey}`}>
+                  {`${Object.keys(prop)}: ${Object.values(prop)}`}
+                </Code>)}
+              </Stack>
+            </Stack>
+          )
+        })}
 
       </section>
     </>

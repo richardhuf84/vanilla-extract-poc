@@ -1,3 +1,4 @@
 import { paddingVariant } from './space.css';
+import { zebraStripes } from './zebra-stripes.css';
 
-export default paddingVariant;
+export { paddingVariant, zebraStripes };

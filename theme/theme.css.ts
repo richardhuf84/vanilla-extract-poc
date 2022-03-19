@@ -20,8 +20,9 @@ export const [themeClass, vars] = createTheme({
       hover: 'hsla(0, 0%, 83%, 1)',
     },
     neutral: {
-      light: 'hsla(0, 0%, 100%, 1)',
-      dark: 'hsla(0, 0%, 0%, 1)'
+      50: 'hsla(0, 0%, 97%, 1)',
+      300: 'hsla(0, 0%, 100%, 1)',
+      900: 'hsla(0, 0%, 0%, 1)',
     }
   },
   font: {
